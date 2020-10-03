@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+rm -rf "$PWD/bundle"
+rm -rf "$PWD/.bundle"
+rm -rf "$PWD/Gemfile.lock"
