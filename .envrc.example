@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export RUBY_VERSION="$(basename $PWD/bundle/ruby/*)"
+export GEM_HOME="$PWD/bundle/ruby/$RUBY_VERSION"
+export GEM_PATH="$GEM_HOME"
+export PATH="$PWD/bin:$PWD/exe:$PWD/bundle/ruby/$RUBY_VERSION/bin:$PATH"
