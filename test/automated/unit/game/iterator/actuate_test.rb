@@ -1,4 +1,4 @@
-require_relative "../../../test_init"
+require_relative "../../../../test_init"
 require "imp/game/iterator"
 require "imp/controls/game/iterator"
 

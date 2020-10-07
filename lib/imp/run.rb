@@ -1,4 +1,5 @@
 require "imp/activate"
+require "imp/game/iterator"
 require "imp/output/console"
 require "imp/log"
 
@@ -10,10 +11,10 @@ module Imp
 
     configure :run
 
-    def self.build(stream: Defaults.stream)
+    def self.build(stream: nil, game_iterator: nil)
       new.tap do |instance|
         Output::Console.configure(instance)
-        # TODO: Configure stream
+        # Matchday::Iterator.configure(stream: stream, game_iterator: game_iterator)
       end
     end
 
@@ -29,12 +30,6 @@ module Imp
       text = File.read(output_path)
 
       output.(text)
-    end
-
-    module Defaults
-      def self.stream
-        StringIO.new
-      end
     end
   end
 end

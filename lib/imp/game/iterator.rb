@@ -7,11 +7,16 @@ module Imp
     class Iterator
       dependency :parse, Parse
 
-      def self.configure(instance, stream: Defaults.stream)
-        instance.game_iterator = build(stream: stream)
+      def self.configure(instance, stream: nil, game_iterator: nil)
+        if !stream.nil? && game_iterator.nil?
+          raise ArgumentError, "Can be configured with stream or game iterator"
+        end
+
+        configured_game_iterator = game_iterator || build(stream: stream)
+        instance.game_iterator = configured_game_iterator
       end
 
-      def self.build(stream: Defaults.stream)
+      def self.build(stream: nil)
         new.tap do |instance|
           instance.configure(stream)
         end

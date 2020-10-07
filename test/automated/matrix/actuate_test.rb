@@ -13,7 +13,7 @@ context "Imp" do
         run.()
         result = output.text
 
-        test "#{name}: Output Matches" do
+        _test "#{name}: Output Matches" do
           assert(result == output_text)
         end
       end

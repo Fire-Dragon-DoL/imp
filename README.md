@@ -14,3 +14,8 @@ The choice of using a gem is to ease the experience of the developers that are
 going to review the challenge. They will be able to easily execute the software
 with an executable file provided with the gem: `imp`, providing a better
 developer experience.
+
+## Assumptions
+
+- Stream is not a CSV
+- Teams can't use the "comma" character in the name
