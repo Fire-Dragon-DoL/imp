@@ -1,5 +1,5 @@
 require_relative "../../test_init"
-require "imp"
+require "imp/run"
 require "imp/controls/run"
 
 context "Imp" do
@@ -9,7 +9,8 @@ context "Imp" do
         run = Imp::Run.new
         output = run.output
 
-        run.(input_stream)
+        # TODO: input_stream must be provided
+        run.()
         result = output.text
 
         test "#{name}: Output Matches" do

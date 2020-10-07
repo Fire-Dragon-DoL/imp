@@ -25,8 +25,9 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "evt-dependency", ">= 2"
   spec.add_dependency "evt-configure", ">= 2"
+  spec.add_dependency "evt-dependency", ">= 2"
+  spec.add_dependency "evt-log", ">= 2"
 
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rake", ">= 11"

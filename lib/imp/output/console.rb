@@ -1,4 +1,5 @@
 require "stringio"
+require "imp/activate"
 
 module Imp
   module Output

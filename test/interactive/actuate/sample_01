@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-if ! cat 'lib/imp/controls/run/samples/01.input' | imp; then
-  >&2 echo 'Actuate from project root directory'
+if ! cat 'lib/imp/controls/samples/01.input' | imp; then
+  echo >&2 'Actuate from project root directory'
 fi

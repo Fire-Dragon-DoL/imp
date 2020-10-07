@@ -3,7 +3,7 @@ require "stringio"
 module Imp
   module Controls
     module Run
-      SAMPLES_PATH = File.expand_path("./run/samples", __dir__)
+      SAMPLES_PATH = File.expand_path("./samples", __dir__)
 
       def self.input_example(file_basename)
         file_path = File.join(SAMPLES_PATH, "#{file_basename}.input")
