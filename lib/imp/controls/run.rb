@@ -17,16 +17,20 @@ module Imp
       end
 
       def self.each_example(&block)
-        Dir.foreach(SAMPLES_PATH) do |filename|
-          next if !filename.end_with?(".input")
-
-          file_basename = File.basename(filename, ".input")
-
+        samples.each do |file_basename|
           input_stream = input_example(file_basename)
           output_text = output_example(file_basename)
 
           block.(file_basename, input_stream, output_text)
         end
+      end
+
+      def self.samples
+        filenames = Dir.glob("*.input", base: SAMPLES_PATH)
+
+        filenames.
+          map { |filename| File.basename(filename, ".input") }.
+          sort
       end
     end
   end
