@@ -56,6 +56,26 @@ context "Imp" do
           end
         end
 
+        context "Team with number in name" do
+          result = parse.(controls.team_with_number_in_name)
+
+          test "Team 1 present" do
+            assert(result.team1 == controls::Team.team_with_number_in_name)
+          end
+
+          test "Team 2 present" do
+            assert(result.team2 == controls::Team.team2)
+          end
+
+          test "Team 1 score present" do
+            assert(result.score1 == controls::Score.team1)
+          end
+
+          test "Team 2 score present" do
+            assert(result.score2 == controls::Score.team2)
+          end
+        end
+
         context "Two teams with score" do
           result = parse.(controls.two_teams_with_score)
 
@@ -68,11 +88,11 @@ context "Imp" do
           end
 
           test "Team 1 score present" do
-            assert(result.team1_score == controls::Score.team1)
+            assert(result.score1 == controls::Score.team1)
           end
 
           test "Team 2 score present" do
-            assert(result.team2_score == controls::Score.team2)
+            assert(result.score2 == controls::Score.team2)
           end
         end
       end

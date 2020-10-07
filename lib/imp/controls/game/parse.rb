@@ -34,6 +34,11 @@ module Imp
           "#{Team.team1} #{Score.team1}, #{Team.team2} #{Score.team2},"
         end
 
+        def self.team_with_number_in_name
+          "#{Team.team_with_number_in_name} #{Score.team1}, " \
+          "#{Team.team2} #{Score.team2}"
+        end
+
         def self.two_teams_with_score
           "#{Team.team1} #{Score.team1}, #{Team.team2} #{Score.team2}"
         end
@@ -49,6 +54,10 @@ module Imp
 
           def self.team3
             "C Team"
+          end
+
+          def self.team_with_number_in_name
+            "Team 1"
           end
 
           def self.empty

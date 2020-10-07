@@ -46,16 +46,16 @@ module Imp
         end
 
         team1 = team(match[1])
-        team1_score = score(match[2])
+        score1 = score(match[2])
         team2 = team(match[3])
-        team2_score = score(match[4])
+        score2 = score(match[4])
 
-        if team1.nil? || team2.nil? || team1_score.nil? || team2_score.nil?
+        if team1.nil? || team2.nil? || score1.nil? || score2.nil?
           logger.debug(tag: :parse) { "Game parsing failed (Text: `#{text}`)" }
           return nil
         end
 
-        Game.build(team1, team1_score, team2, team2_score)
+        Game.build(team1, score1, team2, score2)
       end
 
       def team(text)
