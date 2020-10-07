@@ -1,1 +1,6 @@
 #!/usr/bin/env ruby
+
+require_relative "../load_path"
+require "imp"
+
+Imp::CLI.()

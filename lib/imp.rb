@@ -1,6 +1,7 @@
 require "imp/version"
+require "imp/run"
+require "imp/cli"
 
 module Imp
-  class Error < StandardError; end
-  # Your code goes here...
+  Error = Class.new(StandardError)
 end

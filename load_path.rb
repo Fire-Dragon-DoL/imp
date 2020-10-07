@@ -1,8 +1,5 @@
-bundler_standalone_loader = File.expand_path("./bundle/bundler/setup", __dir__)
+lib_path = File.join(__dir__, "lib")
 
-begin
-  require_relative bundler_standalone_loader
-rescue LoadError
-  warn "WARNING: Standalone bundle loader is not at #{bundler_standalone_loader}. Using Bundler to load gems."
-  require "bundler/setup"
+unless $LOAD_PATH.include?(lib_path)
+  $LOAD_PATH.unshift(lib_path)
 end

@@ -1,8 +1,6 @@
-#!/usr/bin/env ruby
-
 require_relative "../init"
 
-require "imp"
+require "test_bench"
 require "pry-byebug"
 
-Pry.start
+TestBench.activate
