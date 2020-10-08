@@ -21,11 +21,17 @@ To achieve behavioral object isolation, the doctrine of
 [Useful Objects](http://docs.eventide-project.org/user-guide/useful-objects.html) is followed. The adoption is eased through the gems `evt-dependency` and
 `evt-configure`.
 
+## Improvements
+
+- Team and Score samples moved outside of `Parse` namespace
+- Proper formatter object for `Rank` rendering
+
 ## Assumptions
 
 - Stream is not a CSV
 - Teams can't use the "comma" character in the name
 - No escaping with quotes
+- Points is plural for 0 (`0 pts`) and singular only for `1`
 
 ## Development
 
