@@ -16,7 +16,7 @@ Install the gem by downloading it from the release page and install it with
 the following command
 
 ```bash
-gem install imp-1.0.0.gem
+gem install imp-1.1.0.gem
 ```
 
 The software can now be executed by typing:
