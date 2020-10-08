@@ -15,7 +15,7 @@ module Imp
       dependency :parse, Parse
 
       def self.configure(instance, stream: nil, game_iterator: nil)
-        if !stream.nil? && game_iterator.nil?
+        if !stream.nil? && !game_iterator.nil?
           raise ArgumentError, "Can be configured with stream or game iterator"
         end
 
