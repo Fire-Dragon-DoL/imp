@@ -131,6 +131,7 @@ of production quality code in an ongoing project.
 - Last matchday will be included in the scoring even if incomplete (e.g. not all teams played, suspended day)
   - It will not be printed if no one played
 - Bash is used for all command-line instructions in this README
+- Input is a file, not a directory
 
 ## Alternatives to the design
 
