@@ -14,7 +14,7 @@ module Imp
     def self.build(stream: nil, game_iterator: nil)
       new.tap do |instance|
         Output::Console.configure(instance)
-        # Matchday::Iterator.configure(stream: stream, game_iterator: game_iterator)
+        # Matchday::Iterator.configure(instance, stream: stream, game_iterator: game_iterator)
       end
     end
 

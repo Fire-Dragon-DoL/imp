@@ -60,6 +60,10 @@ module Imp
             "D Team"
           end
 
+          def self.unplaying_team1
+            "Unplaying Team"
+          end
+
           def self.team_with_number_in_name
             "Team 1"
           end
