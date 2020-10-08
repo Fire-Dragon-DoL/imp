@@ -21,5 +21,25 @@ module Imp
       score1 == other.score1 &&
       score2 == other.score2
     end
+
+    def tie?
+      score1 == score2
+    end
+
+    def team1_won?
+      score1 > score2
+    end
+
+    def team2_won?
+      score2 > score1
+    end
+
+    def team1_lost?
+      score1 < score2
+    end
+
+    def team2_lost?
+      score2 < score1
+    end
   end
 end
