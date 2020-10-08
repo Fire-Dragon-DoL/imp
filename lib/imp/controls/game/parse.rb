@@ -56,6 +56,10 @@ module Imp
             "C Team"
           end
 
+          def self.team4
+            "D Team"
+          end
+
           def self.team_with_number_in_name
             "Team 1"
           end
@@ -76,6 +80,10 @@ module Imp
 
           def self.team3
             12
+          end
+
+          def self.team4
+            1
           end
 
           def self.empty

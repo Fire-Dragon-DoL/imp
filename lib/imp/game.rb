@@ -13,5 +13,13 @@ module Imp
         instance.score2 = score2
       end
     end
+
+    def ==(other)
+      other.is_a?(self.class) &&
+      team1 == other.team1 &&
+      team2 == other.team2 &&
+      score1 == other.score1 &&
+      score2 == other.score2
+    end
   end
 end

@@ -1,10 +1,17 @@
 require "stringio"
 require "imp/activate"
 require "imp/game/parse"
+require "imp/game/iterator/fixed"
 
 module Imp
   class Game
     class Iterator
+      module Substitute
+        def self.build
+          Fixed.build
+        end
+      end
+
       dependency :parse, Parse
 
       def self.configure(instance, stream: nil, game_iterator: nil)
