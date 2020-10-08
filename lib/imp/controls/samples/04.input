@@ -1,0 +1,14 @@
+--- Matchday 1
+A 3, B 0
+C 3, D 0,
+
+
+C 0, D 0
+A 1,
+--- Matchday 2
+A 1, B 0
+,
+C 0, D 3
+
+--- Matchday 3
+A 0, B 0

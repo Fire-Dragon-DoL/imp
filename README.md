@@ -25,7 +25,6 @@ To achieve behavioral object isolation, the doctrine of
 
 - Team and Score samples moved outside of `Parse` namespace
 - Proper formatter object for `Rank` rendering
-- Last empty line of the output not relevant
 
 ## Assumptions
 
@@ -33,6 +32,8 @@ To achieve behavioral object isolation, the doctrine of
 - Teams can't use the "comma" character in the name
 - No escaping with quotes
 - Points is plural for 0 (`0 pts`) and singular only for `1`
+- Last empty line of the output not relevant
+- Last matchday will be printed even if incomplete (e.g. suspended)
 
 ## Development
 
