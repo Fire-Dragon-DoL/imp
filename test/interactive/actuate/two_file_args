@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+if [ ! -f 'lib/imp/controls/samples/01.input' ]; then
+  echo >&2 'Actuate from project root directory'
+fi
+imp 'lib/imp/controls/samples/01.input' 'lib/imp/controls/samples/01.input'
