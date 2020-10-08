@@ -6,16 +6,15 @@ context "Imp" do
   context "Run" do
     context "Actuate" do
       context "Samples" do
-        Imp::Controls::Run.each_example do |name, input_stream, output_text|
-          run = Imp::Run.new
+        Imp::Controls::Run.each_example do |name, stream, output_text|
+          run = Imp::Controls::Run.example(stream: stream)
           output = run.output
 
-          # TODO: input_stream must be provided
           run.()
           result = output.text
 
-          _test "#{name}: Output Matches" do
-            assert(result == output_text)
+          test "#{name}: Output Matches" do
+            assert(result.strip == output_text.strip)
           end
         end
       end

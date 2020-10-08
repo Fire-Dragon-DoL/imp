@@ -24,5 +24,9 @@ module Imp
     def started?
       games.size > 0
     end
+
+    def each_game(&block)
+      games.each(&block)
+    end
   end
 end

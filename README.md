@@ -25,6 +25,7 @@ To achieve behavioral object isolation, the doctrine of
 
 - Team and Score samples moved outside of `Parse` namespace
 - Proper formatter object for `Rank` rendering
+- Last empty line of the output not relevant
 
 ## Assumptions
 

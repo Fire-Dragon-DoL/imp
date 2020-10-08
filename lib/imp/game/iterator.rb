@@ -25,6 +25,7 @@ module Imp
 
       def self.build(stream: nil)
         new.tap do |instance|
+          Parse.configure(instance)
           instance.configure(stream)
         end
       end

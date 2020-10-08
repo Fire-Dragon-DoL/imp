@@ -41,5 +41,9 @@ module Imp
     def team2_lost?
       score2 < score1
     end
+
+    def to_s
+      "#{team1} #{score1}, #{team2} #{score2}"
+    end
   end
 end

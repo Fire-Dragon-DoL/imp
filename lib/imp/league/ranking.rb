@@ -28,6 +28,11 @@ module Imp
           map { |team, points| Rank.new(team, points) }.
           sort
       end
+
+      def top(league, teams_count)
+        ranks = call(league)
+        ranks.take(teams_count)
+      end
     end
   end
 end
