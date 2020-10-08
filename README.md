@@ -27,8 +27,7 @@ imp
 
 ### Installation from Project directory
 
-Alternatively, once this project has bin downloaded, `cd` into the project
-and run the following commands:
+Download and `cd` into the project directory, then run the following commands:
 
 ```bash
 bundle install
@@ -60,17 +59,17 @@ Imp::Run.(stream: StringIO.new("some data"))
 
 ## Running the test suite
 
-Alternatively, once this project has bin downloaded, `cd` into the project
-and run the following commands:
+Download and `cd` into the project directory, then run the following commands:
 
 ```bash
+export LOG_LEVEL=_none
 bundle install
-LOG_LEVEL=_none bundle exec bench 'test/automated'
+bundle exec bench 'test/automated'
 ```
 
 ## Running interactive tests
 
-Interactive tests exercise `imp` by passing samples stored in
+Interactive tests actuate `imp` by passing samples stored in
 `lib/imp/controls/samples`. These are meant to be exercised by a human and
 provide no affordance to verify the software output.
 The goal is for a human to inspect the output and determine the correctness
@@ -100,7 +99,7 @@ programming language seems to be the best tool for the job.
 
 The choice of using a gem is to ease the experience of the developers that are
 going to review the challenge. They will be able to easily execute the software
-with an executable file provided with the gem: `imp`, providing a better
+with an executable file provided with the gem: `imp`, offering a better
 developer experience.
 
 ### Useful Objects
